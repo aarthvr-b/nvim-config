@@ -1,2 +1,2 @@
 # nvim-config
-My MacBook nvim config for Python development.
+My personal nvim config for development.
