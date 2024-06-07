@@ -5,20 +5,27 @@ return {
   },
 
   config = function()
-    local alpha = require("alpha")
-    local dashboard = require("alpha.themes.dashboard")
-    dashboard.section.header.val = {
+     local alpha = require("alpha")
+     local dashboard = require("alpha.themes.dashboard")
+ --    opts = function (_,opts)
+ --
+     local logo = [[
 
-      [[          ▀████▀▄▄              ▄█ ]],
-      [[            █▀    ▀▀▄▄▄▄▄    ▄▄▀▀█ ]],
-      [[    ▄        █          ▀▀▀▀▄  ▄▀  ]],
-      [[   ▄▀ ▀▄      ▀▄              ▀▄▀  ]],
-      [[  ▄▀    █     █▀   ▄█▀▄      ▄█    ]],
-      [[  ▀▄     ▀▄  █     ▀██▀     ██▄█   ]],
-      [[   ▀▄    ▄▀ █   ▄██▄   ▄  ▄  ▀▀ █  ]],
-      [[    █  ▄▀  █    ▀██▀    ▀▀ ▀▀  ▄▀  ]],
-      [[   █   █  █      ▄▄           ▄▀   ]],
-    }
+
+                                                                         
+           ████ ██████           █████      ██                     
+          ███████████             █████                             
+          █████████ ███████████████████ ███   ███████████   
+         █████████  ███    █████████████ █████ ██████████████   
+        █████████ ██████████ █████████ █████ █████ ████ █████   
+      ███████████ ███    ███ █████████ █████ █████ ████ █████  
+     ██████  █████████████████████ ████ █████ █████ ████ ██████ 
+
+                               [ @aarthvr-b ]                        
+
+    ]]
+
+    dashboard.section.header.val = vim.split(logo, "\n", { triempty = true })
 
     dashboard.section.buttons.val = {
       dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
@@ -32,7 +39,7 @@ return {
     }
 
     local function footer()
-      return "Keep pushing! 󰿖"
+      return '[Keep pushing !]'
     end
 
     dashboard.section.footer.val = footer()
