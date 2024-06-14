@@ -1,4 +1,4 @@
-return 
+return
     {
 {
 "akinsho/toggleterm.nvim",
@@ -10,14 +10,17 @@ return
           },
   opts = {
         open_mapping = [[<C-t>]],
-        direction = 'float',
+        direction = 'horizontal',
         shade_filetypes = {},
         hide_numbers = true,
         insert_mappings = true,
         terminal_mappings = true,
         start_in_insert = true,
         close_on_exit = true,
-        shell = 'C:\\Users\\arthur.barbosa\\AppData\\Local\\Programs\\Git\\bin\\bash.exe'
+        shade_terminals = true,
+        shading_factor = 1,
+        size = 18,
+        persist_size = true,
       },
   },
 }
