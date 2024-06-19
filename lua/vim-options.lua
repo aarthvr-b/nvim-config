@@ -6,4 +6,5 @@ vim.cmd("set number")
 vim.cmd("set clipboard+=unnamedplus")
 vim.g.mapleader = " "
 vim.g.backgroud = "light"
-
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
