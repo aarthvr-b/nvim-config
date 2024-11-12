@@ -9,8 +9,30 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "pyright", "terraformls", "tflint" },
-			})
+				ensure_installed = {
+						"json",
+					        "javascript",
+					        "typescript",
+					        "tsx",
+					        "yaml",
+					        "html",
+					        "css",
+					        "markdown",
+					        "markdown_inline",
+					        "graphql",
+					        "bash",
+					        "lua",
+					        "vim",
+					        "dockerfile",
+					        "gitignore",
+					        "query",
+					        "vimdoc",
+						"lua_ls",
+						"pyright",
+						"terraformls",
+						"tflint" },
+			}
+		)
 		end,
 	},
 	{
