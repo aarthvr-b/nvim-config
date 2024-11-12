@@ -1,6 +1,7 @@
 return {
   "tris203/precognition.nvim",
-  config = {
+  event = {"InsertEnter"},
+    config = {
     -- startVisible = true,
     -- showBlankVirtLine = true,
     -- highlightColor = { link = "Comment" },
