@@ -12,8 +12,7 @@ return {
 				ensure_installed = {
 						"lua_ls",
 						"pyright",
-						"terraformls",
-						"tflint" },
+						 },
 			}
 		)
 		end,
@@ -34,6 +33,20 @@ return {
 
 			lspconfig.pyright.setup({
 				capabilities = capabilities,
+                settings = {
+                    venvPath = ".",
+                    pythonPath = "./.venv/bin/python",
+                },
+                analysis = {
+                autoSearchPaths = true,
+                useLibraryCodeForTypes = true,
+                diagnosticMode = "workspace",
+                typeCheckingmode = "basic",
+                diagnosticSeverityOverrides = {
+                    reportUnusedVariable = "none", -- handled by Ruff
+                    reportMissingDocstring = "none", -- handled by Ruff
+                    },
+                },
 			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gD", vim.lsp.buf.definition, {})
